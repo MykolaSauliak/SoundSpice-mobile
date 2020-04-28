@@ -1,3 +1,5 @@
+import { Dimensions } from "react-native";
+
 export const scanMessage = 'finding music';
 
 export const settings = {
@@ -35,3 +37,7 @@ export const settings = {
 	},
 	share: 'Share SoundSpice'
 };
+
+export default {
+	 PlayerWidth: Dimensions.get('window').width * 0.82,
+}

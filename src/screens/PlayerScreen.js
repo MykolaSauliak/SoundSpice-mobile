@@ -10,8 +10,7 @@ import CoverArt from '../components/CoverArt';
 import Icon from '../components/Icon';
 import OptionsMenu from '../components/OptionsMenu';
 import { backgroundColor, bgTransColor, contrastTransColor, contrastColor } from '../themes/styles';
-
-const PlayerWidth = Dimensions.get('window').width * 0.82;
+import constants from "../constants";
 
 function PlayerScreen(props) {
 	const { navigation, currentTrack, theme } = props;
@@ -66,7 +65,7 @@ const Header = styled.View`
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	width: ${PlayerWidth + 10}px;
+	width: ${constants.PlayerWidth + 10}px;
 	margin-top: 10px;
 `;
 
@@ -91,7 +90,7 @@ const Title = styled.Text`
 	font-family: 'CircularBold';
 	font-size: 18px;
 	color: ${contrastColor};
-	width: ${PlayerWidth}px;
+	width: ${constants.PlayerWidth}px;
 	text-align: center;
 `;
 
@@ -100,7 +99,7 @@ const Artist = styled.Text`
 	font-size: 15px;
 	margin-top: 4px;
 	color: ${contrastTransColor(0.75)};
-	width: ${PlayerWidth}px;
+	width: ${constants.PlayerWidth}px;
 	text-align: center;
 `;
 
